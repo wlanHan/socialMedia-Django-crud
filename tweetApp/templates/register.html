@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+
+{% block site-title %}
+  Kayıt Ol
+{% endblock site-title %}
+
+{% block main-layout %}
+  
+<div class="container">
+
+
+<form action="{% url 'register-view' %}" method="post" class="w-50">
+  
+    <h3>Kayıt Ol</h3>
+    <hr>
+
+    {% csrf_token %}
+
+    {% if hata %}
+    
+        <p class="text-danger">{{hata}}</p>
+    {% endif %}
+
+    <div class="mb-3">
+        <input name="username" type="text" placeholder="Kullanıcı Adınız" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <input name="password" type="password" placeholder="Şifreniz" class="form-control">
+    </div>
+ 
+    <div class="mb-3">
+        <input name="password2" type="password" placeholder="Şifre Tekrar" class="form-control">
+    </div>
+
+    <p class="text-muted">Hesabınız var mı? Buradan <a href="{% url 'login-view' %}">giriş</a> yapabilirsiniz </p>
+    
+    <div>
+        <button type="submit" class="btn btn-success">Kayıt Ol</button>
+    </div>
+</form>
+
+</div>
+
+{% endblock main-layout %}

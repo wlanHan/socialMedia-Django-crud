@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block site-title %}
+  AnaSayfa
+{% endblock site-title %}
+
+
+
+{% block site-icerik %}
+
+    {% if request.user.is_authenticated %}
+    <div class="mb-4 post-container">
+
+        {% if error %}
+        <div class="alert alert-danger" role="alert">
+         {{error}}
+        </div>
+        {% endif %}
+
+        <div class="d-flex align-items-center avatar-container">
+          
+  
+            <div>
+                <img src="{{request.user.avatar.url}}" alt="Avatar">
+            </div>
+
+            <a class="username" href="{% url 'user-view' request.user.id %}">{{request.user.username}}</a>
+
+        </div>
+
+        <form action="{% url 'index-view' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <textarea required name="tweetContent" class="form-control one" placeholder="Neler oluyor?"></textarea>
+
+            <div class="post-card">
+              <input name="tweetAttachment" class="form-control" type="file">
+              <button type="submit" class="form-control btn btn-success">Tweetle</button>
+              <button type="button" class=".first-btn">Emoji Aç</button>
+            </div>
+
+        </form>
+
+    </div>
+    {% endif %}
+
+
+    {% for id, tweet in tweets.items %}
+
+
+      {% include "./Components/card.html" with id=id tweet=tweet %}
+
+
+   {% endfor %}
+
+
+
+   <button class="second">Tetikle</button>
+
+ <script src="{% static 'Scripts/api_request.js' %}"></script>
+
+  <script>
+
+
+function navigateToDetail(event, tweetId) {
+
+
+      // console.log("tıklanan eleman:",event.target.localName)
+
+      if (event.target.localName === "img") {
+           return
+      }
+
+      window.location.href = `/tweet/${tweetId}`
+
+}
+
+  </script>
+
+
+
+{% endblock site-icerik %}

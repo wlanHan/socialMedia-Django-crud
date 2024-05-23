@@ -1,0 +1,31 @@
+<div class="modal fade" id="ban-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">{{user.username}} için ban formu</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <form autocomplete="off" action="{% url 'ban-view' user.id %}" method="post">
+
+        {% csrf_token %}
+
+        <div class="modal-body">
+         
+                
+                <div class="mb-3">
+                    <input class="form-control" type="text" name="ban_reason" placeholder="Ban sebebi">
+                </div>
+
+      
+        </div>
+
+            <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Yasakla</button>
+            </div>
+    
+        </form>
+
+      </div>
+    </div>
+  </div>

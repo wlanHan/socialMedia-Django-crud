@@ -1,0 +1,348 @@
+.user-profile p {
+
+    margin-bottom: 3px;
+}
+
+.contact-container {
+
+    flex: 1;
+    text-align: end;
+}
+
+.contact-container button {
+
+    border: 1px solid !important;
+    font-size: 14px !important;
+    background: transparent;
+    border-radius: 2px;
+    transition: 0.1s;
+    min-width: 70px;
+}
+
+.contact-container button:hover {
+
+    color: rgb(44, 131, 245);
+    /* font-weight: bold; */
+    letter-spacing: 1px;
+
+}
+
+.heart {
+    font-size: 21px;
+    cursor: pointer;
+    color: #cd2828;
+}
+
+.sticky-side {
+
+    position: sticky;
+    top: 40px;
+}
+
+.tweet-comment-wrapper .avatar-container {
+
+    border: none;
+    padding: 12px;
+}
+
+.tweet-comment-wrapper .tweet-comment {
+
+    padding-left: 1rem;
+}
+
+.back-container {
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.backBtn {
+
+    font-size: xx-large;
+    color: #212529;
+    cursor: pointer;
+}
+
+.dropdown-menu[data-bs-popper] {
+
+    left: -85px !important;
+}
+
+#userInfo:hover {
+
+    color: inherit !important;
+}
+
+
+.post-container {
+
+    border: 1px solid #e7dfdf;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+.post-container textarea {
+
+    resize: none;
+}
+
+.post-card {
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 8px;
+}
+
+
+.post-card button {
+
+    border: none;
+}
+
+
+.avatar-banner {
+
+    background-color: transparent;
+}
+
+
+.user-information-container {
+
+    margin-left: 8px;
+    margin-top: 8px;
+}
+
+.user-information-container hr {
+
+    margin: 0;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+.user-information-container p {
+
+    margin: 0;
+    margin-bottom: 3px;
+}
+
+
+.current-user-avatar-container {
+
+    padding: 8px;
+}
+
+.tweet-attachment {
+
+    padding: 1rem;
+}
+
+.tweet-attachment img {
+
+    width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+.avatar-container {
+
+    border: 1px solid #dbd8d8;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 8px;
+    gap: 8px;
+}
+
+
+
+
+
+.username {
+
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.avatar-container img {
+
+    max-width: 60px;
+    border-radius: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    min-height: 50px;
+    max-height: 50px;
+}
+
+.right-side, .left-side {
+
+    min-height: 100vh;
+}
+
+
+.left-side {
+
+    border-left: 1px solid gainsboro;
+}
+
+.right-side {
+
+    border-right: 1px solid gainsboro;
+}
+
+.profile-edit {
+
+    margin-right: 1rem;
+}
+
+.profile-edit ion-icon {
+
+    cursor: pointer;
+    color: orange;
+    font-size: large;
+
+}
+
+
+.card-body.tweet-body {
+
+    padding: 5px;
+}
+
+.card-body.tweet-body .avatar-container {
+
+    border: none;
+}
+
+.card-body .tweet-text {
+
+    margin-left: 1rem;
+}
+
+.card-body .tweet-footer {
+
+    padding: 1rem;
+}
+
+
+.tweet-footer-container {
+
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.tweet-footer-container ion-icon {
+
+    font-size: 21px;
+    cursor: pointer;
+}
+
+
+.like-container, .comment-container {
+
+
+    display: flex;
+    gap: 3px;
+    height: 30px;
+    align-items: center;
+
+    border: 1px solid #97afcd;
+    border-radius: 10px;
+    padding: 9px;
+}
+
+.data-wrap {
+
+    cursor: pointer;
+}
+
+form .comment-wrapper {
+
+    padding: 10px;
+    border: 1px solid #cecece;
+    border-radius: 10px;
+    flex: 1;
+    gap: 5px;
+}
+
+
+form .comment-wrapper ion-icon {
+
+    font-size: 21px;
+    cursor: pointer;
+    color: #5280ff;
+}
+
+form .comment-field {
+
+    flex: 1;
+}
+form .comment-wrapper .comment-field textarea {
+
+    margin-bottom: 0px !important;
+    resize: none;
+    border: none;
+    transition: 0.5s;
+}
+
+
+form .comment-wrapper .comment-field textarea:focus {
+
+    border: 1px solid rgb(66, 152, 233);
+    outline: none;
+    box-shadow: none;
+    background-color: rgb(247 247 247);
+}
+
+footer {
+
+    position: relative;
+    width: 100%;
+    bottom: -16px;
+    min-height: 150px;
+}
+
+
+footer ul {
+
+    color: white;
+}
+
+footer ul li a {
+
+    color: inherit;
+    transition: 0.3s;
+}
+
+
+footer a:hover {
+
+    color: rgb(52, 52, 231);
+    text-decoration: none;
+}
+
+
+footer .copy {
+
+    background-color:#141414;
+
+}
+
+footer .footer-logo img {
+
+    border: 1px solid #5d5858;
+    width: 100%;
+}
+
+.copy p {
+
+    margin: 0;
+    padding: 1rem;
+
+    a {
+
+        color: white;
+    }
+}
+

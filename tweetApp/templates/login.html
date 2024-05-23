@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+
+{% block site-title %}
+  Giriş Yap
+{% endblock site-title %}
+
+
+{% block main-layout %}
+
+<div class="container">
+
+{% if error %}
+  <p class="text-danger">{{error}}</p>
+{% endif %}
+
+<form action="{% url 'login-view' %}" method="post" class="w-50">
+  
+    <h3>Giriş Yap</h3>
+    <hr>
+
+    {% csrf_token %}
+    <div class="mb-3">
+        <input name="username" type="text" placeholder="Kullanıcı Adınız" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <input name="password" type="password" placeholder="Şifreniz" class="form-control">
+    </div>
+ 
+    <p class="text-muted">Hesabınız yok mu? Buradan <a href="{% url 'register-view' %}">kayıt</a> olun </p>
+    
+    <div>
+        <button type="submit" class="btn btn-success">Giriş Yap</button>
+    </div>
+</form>
+
+
+</div>
+
+{% endblock main-layout %}

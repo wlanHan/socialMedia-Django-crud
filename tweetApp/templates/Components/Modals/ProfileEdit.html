@@ -1,0 +1,52 @@
+<div class="modal fade" id="edit-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Profilimi Düzenle</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <form autocomplete="off" action="{% url 'edit-view' %}" method="post" enctype="multipart/form-data">
+
+        {% csrf_token %}
+
+        <div class="modal-body">
+         
+                
+                <h1 class="fs-5">Kullanıcı Bilgileri</h1>
+                <hr>
+
+                <label for="username">Hesap Adı:</label>
+                <input id="username" name="username" type="text" placeholder="Hesap Adınız">
+
+
+                <label for="email">E-mail:</label>
+                <input id="email" name="email" type="email" placeholder="{{request.user.email}}">
+
+                <h1 class="fs-5">Avatar</h1>
+                <hr>
+
+                <input type="file" name="avatar">
+
+                <div>
+                        <h1 class="fs-5">Parola</h1>
+
+                        <label for="oldPass">Eski Şifre:</label>
+                        <input id="oldPass" name="old_password" type="password" placeholder="Eski Şifre">
+                        
+                        <label for="newPass">Yeni Şifre:</label>
+                        <input id="newPass" name="new_password" type="password" placeholder="Yeni Şifre">
+                </div>
+
+      
+        </div>
+
+            <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Değişiklikleri Kaydet</button>
+            </div>
+    
+        </form>
+
+      </div>
+    </div>
+  </div>

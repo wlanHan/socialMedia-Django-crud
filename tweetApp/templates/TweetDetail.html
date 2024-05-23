@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block site-icerik %}
+
+
+{% include "./Components/_back_to_feed.html" %}
+
+
+{% include "./Components/card.html" with id=tweet.data.id tweet=tweet %}
+
+
+
+
+<div class="tweet-comment-wrapper">
+
+    <h4 class="mb-2 ms-2">Yorumlar ({{tweet.data.comments.count}})</h4>
+
+    {% for comment in tweet.data.comments.all %}
+      
+    <div class="card mb-3">
+
+ 
+    <div class="d-flex align-items-center avatar-container">
+
+
+        <div>
+            <img src="{{comment.author.avatar.url}}" alt="Avatar">
+        </div>
+
+        <a class="username" href="{% url 'user-view' comment.author.id %}">{{comment.author.username}}</a>
+
+
+
+
+
+      {% if request.user.is_authenticated and request.user.is_superuser or request.user.id == comment.author.id %}
+      
+          <div class="dropdown ms-auto">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+            
+            <ul class="dropdown-menu">
+              <li> <button class="dropdown-item text-primary" data-bs-toggle="modal" data-bs-target="#">Yorumu Güncelle</button>  </li>
+              <li> <a class="dropdown-item text-danger" href="#">Yorumu Sil</a> </li>
+            
+            </ul>
+          </div>
+      {% endif %}
+
+
+    </div>
+
+
+    <div class="tweet-comment">
+
+        <p>{{comment.message}}</p>
+    </div>
+
+
+    <div class="tweet-comment-footer">
+
+        <p class="text-muted text-end pe-4"> <small>• {{comment.createdAt}}</small> </p>
+
+    </div>
+    
+    </div>
+    {% endfor %}
+
+</div>
+
+<script src="{% static 'Scripts/api_request.js' %}"></script>
+
+{% endblock site-icerik %}
