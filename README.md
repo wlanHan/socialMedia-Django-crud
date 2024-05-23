@@ -12,7 +12,9 @@
   <li>Özelleştirilebilir user profili</li>
 </ul>
 <hr>
-![profile](https://github.com/wlanHan/socialMedia-Django-crud/assets/159789584/9e948369-5ccb-47e1-85b5-f99287d5f682)
+![profile](https://github.com/wlanHan/socialMedia-Django-crud/assets/159789584/f9029388-c884-432c-a82d-9ddfca3454bc)
+
 
 <hr>
-![last tweets](https://github.com/wlanHan/socialMedia-Django-crud/assets/159789584/a5336d31-8551-4ce5-8ad6-f110fc713172)
+
+![last tweets](https://github.com/wlanHan/socialMedia-Django-crud/assets/159789584/aece3db0-8025-4bd3-bdfb-b4ba06701e9c)
