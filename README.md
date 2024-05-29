@@ -4,7 +4,7 @@
   <li>Yetkililer(Admin/Moderator) diğer kullanıcıları askıya alabilir, banlayabilir veya hesaplarını kaldırabilir.</li>
   <li>Yeterli yetkiye sahip olan kullanıcılar (Moderator/Admin/Post sahibi) paylaşılan içerikleri düzenleyebilir.</li>
   <li>İlişki durumu, yaşadığı yer gibi kişisel bilgiler eklenebilir ve güncellenebilir.</li>
-  <li>Yeni kayıt oluşturan kullanıcıların diğer kullanıcılara önerilmesi</li>
+  <li>Yeni kayıt oluşturan kullanıcıların diğer kullanıcılara önerilmesi.</li>
   <li>Giriş ve kayıt sisteminde Authentication doğrulamaları yapılıyor.</li>
   <li>Gönderilere ve yorumlara emoji eklenebilir.</li>
   <li>Front-end & Back-end doğrulamaları</li>
