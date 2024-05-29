@@ -7,7 +7,7 @@
   <li>Yeni kayıt oluşturan kullanıcıların diğer kullanıcılara önerilmesi.</li>
   <li>Giriş ve kayıt sisteminde Authentication doğrulamaları yapılıyor.</li>
   <li>Gönderilere ve yorumlara emoji eklenebilir.</li>
-  <li>Front-end & Back-end doğrulamaları</li>
+  <li>Front-end & Back-end doğrulamaları.</li>
   <li>Takip ve takibi bırakma sistemi.</li>
   <li>Özelleştirilebilir user profili</li>
   <li>Postları beğenme ve yorum atma.</li>
